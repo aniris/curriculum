@@ -1,42 +1,49 @@
-# Welcome to ElmBridge!
+# Добро пожаловать в ElmBridge!
 
-Today, you're going to be learning Elm! So exciting!
+Сегодня вы будете изучать Elm! Так захватывающе!
 
-This tutorial is meant to be completed over the course of 5 hours, broken up into two chunks:
- - 2.5 hours on learning the basics of the language.
- - 3 hours building an Elm application from scratch — specifically, an emoji translator!
+Этот туториал рассчитан на 5 часов и разбит на 2 части:
+ - 2.5 часа на изучение основ языка.
+ - 3 часа на создание приложения на Elm с нуля — а именно, переводчик эмодзи!
 
-By the end of this tutorial, you can expect to:
+К концу туториала вы:
 
-- Know what Elm is, and why people use it.
-- Be familiar with the core data structures of the language.
-- Understand the architecture of Elm applications.
-- Be able to build interactive front-end applications in Elm.
+- Узнаете, что такое Elm, и почему люди используют его.
+- Будете знакомы с основными структурами данных языка.
+- Поймете архитектуру Elm приложений.
+- Сможете создавать интерактивные front-end приложения на Elm.
 
-Thanks for coming! Let's get started.
+Спасибо, что пришли! Давайте начинать.
 
-## Setup
+## Установка
 
-We're going to be working with:
+Мы будем работать с:
 
-- The latest version of the Elm language platform.
-- The terminal.
-- The text editor of your choice.
-- The web browser of your choice.
+- Последней версии языка Elm.
+- Терминалом.
+- Текстовым редактором на ваш выбор.
+- Веб-браузером на ваш выбор.
 
-At various points today, you'll also be asked to download code from GitHub, so internet access is also required.
+Так же сегодня вам будет предложено загрузить исходный код из GitHub, 
+так что вам понадобится доступ в интернет.
 
-### Installing Elm
+_На территории России возможно необходимо будет воспользоваться VPN 
+для доступа к [package.elm-lang.org](https://package.elm-lang.org)._
 
-If you haven't done so already, follow [the official Elm guide](https://guide.elm-lang.org/get_started.html) for installing the language platform. **Note for Windows users:** You might want to check our [handy Windows installation checklist](Special Installation Notes.md) to guide you through installation.
+### Установка Elm
 
-You can verify everything is working by launching the Elm REPL ([What is a REPL?](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) by running the following command in your terminal:
+Если вы все еще этого не сделали, следуйте [официальному руководству Elm](https://guide.elm-lang.org/get_started.html) для установки языковой платформы.
+**На заметку пользователям Windows:** 
+Вы можете воспользоваться нашим удобным [чеклистом для установки Elm на Windows](Special_Installation_Notes.md).
+
+Вы можете убедиться, что все работает, запустив Elm REPL ([Что такое REPL?](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)).
+Для этого выполните следующую команду в терминале:
 
 ```sh
 elm repl
 ```
 
-If you see the following message, you are ready to go!
+Если вы видите следующее сообщение, то вы готовы к работе!
 
 ```
 ---- Elm 0.19.0 ----------------------------------------------------------------
@@ -45,4 +52,4 @@ Read <https://elm-lang.org/0.19.0/repl> to learn more: exit, help, imports, etc.
 >
 ```
 
-When you're done exploring, you can type `:exit` to get out.
+Когда вы закончите знакомство с Elm REPL, вы можете ввести `:exit` для выхода.
