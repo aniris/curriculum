@@ -7,7 +7,7 @@
 * [Getting Started](Getting Started.md)
 * [The Basic Building Blocks of Elm](The Basic Building Blocks of Elm.md)
 * [Intermission: Building User Interfaces](Building User Interfaces.md)
-* [Special Installation Notes](Special Installation Notes.md)
+* [Special Installation Notes](Special_Installation_Notes.md)
 
 ## Making an Emoji Translator
 
