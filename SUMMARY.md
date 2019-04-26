@@ -3,7 +3,7 @@
 ## Learning the Basics
 
 * [Introduction](Introduction.md)
-* [Intermission: Why Elm?](Why Elm.md)
+* [Intermission: Why Elm?](Why_Elm.md)
 * [Getting Started](Getting Started.md)
 * [The Basic Building Blocks of Elm](The Basic Building Blocks of Elm.md)
 * [Intermission: Building User Interfaces](Building User Interfaces.md)
