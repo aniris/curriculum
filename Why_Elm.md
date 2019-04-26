@@ -1,41 +1,74 @@
-# Why Elm?
+# Почему Elm?
 
-In this section, we'll talk about the advantages — and disadvantages! — of using Elm to make front-end applications.
-
-
-## First off, what is Elm?
-
-**Elm is a language for building complex web interfaces.** Much like CoffeeScript or JSX, Elm compiles to JavaScript; the Elm Platform takes your Elm code and turns it into JavaScript that any web browser can understand. In many ways, it operates similarly to front-end JavaScript frameworks like React, Angular, and Ember.
-
-Elm is more powerful than a frontend framework though: **it is a distinct programming language that can strictly enforce its opinions.**
-
-You may have heard words like **functional** and **statically typed** used to describe Elm. **Functional** means that a function always returns the same value for a given input. **Statically typed** means that the compiler checks that the code makes sense before you can use it in production: it won't let you ask for the length of an integer or try to multiply a string and a float. If your code compiles, that means that you're doing operations that make sense. If you give a function the wrong *type* of value (a `String` rather than an `Int`) the Elm compiler will figure it out immediately and give you a hint.
+В этом разделе мы поговорим о преимуществах - и недостатках! - использования Elm для создания
+front-end приложений.
 
 
-## So why Elm?
+## Прежде всего, что такое Elm?
 
-One compelling reason is that **entire categories of bugs are impossible in Elm**, like:
-  - "I expected this function to return a number, but it returned nil instead."
-  - "Sometimes when I call this function it fails, even though I gave it the exact same input."
-  - "Something is changing the value of my variable, and I'm not sure where it's happening."
+**Elm - это язык для построения сложных веб-интерфейсов.** 
+Так же, как и CoffeeScript или JSX, Elm компилируется в JavaScript; 
+платформа Elm берет ваш Elm и преобразовывает в JavaScript, который может понять любой бразуер. 
+Во многом он работает схоже с front-end фреймворками JavaScript, такими как React, Angular и Ember.
 
-These errors cannot happen in Elm because of the language's strictness. Indeed, the rules mean that **Elm applications can never accidentally crash.** There are no runtime exceptions — no `undefined is not a function` or `undefined method for nil:NilClass`. Consequently, Elm developers spend much less time in the Developer Tools console than JavaScript developers, and less time in the browser in general.
+Однако Elm более мощный, чем frontend фреймворк: 
+**это отдельный язык программирования, который заставит вас четко придерживаться его принципов.**
 
-Because Elm requires all programs to follow its rules, **the Elm compiler will tell you exactly what's wrong with your program if you make a mistake**. It will tell you if you made an `if/else` expression return two different kinds of values, if you are calling a function with too many arguments, or if you are referencing a variable that does not exist.
+Возможно, вы уже слышали такие слова как **функциональный** и **статически типизируемый** в отношении Elm. 
+**Функциональный** означает, что функция всегда возвращает одно и то же значение при одинаковых входных параметрах
+_(на самом деле это одна из характеристик чистой функции *примечание переводчика)_.
+**Статически типизируемый** означает, что ваш код имеет смысл прежде тем, как вы сможете использовать его в продакшене: 
+он не позволит вам запрашивать длину строки у integer или умножать string и float. 
+ЕСли ваш код скомпилировался, это значит, что вы выполняете операции, которые имеют смысл. 
+Если зададите функции неправильный *тип* значения (например, `String` вместо `Int`), компилятор Elm сразу обнаружит это и даст вам подсказку.
 
-Developing with Elm often feels like an ongoing conversation with the compiler, gently pushing you toward writing better code. Often, you don't even need to look at your application in the browser while implementing a feature — you can trust the compiler to tell you if you are going in the right direction.
+
+## Итак, почему Elm?
+
+Одна веская причина заключается в том, что **в Elm невозможно допустить целые категории ошибок** таких, как:
+  - "Я ожидал, что эта функция вернет число, но вместо этого она ничего не вернула."
+  - "Иногда, когда я вызываю эту функцию, она выбрасывает ошибку, хотя я передаю ей одни и те же параметры."
+  - "Что-то изменило значение моей пеерменной, и я не уверен, где это произошло."
+
+Эти ошибки не могут возникунуть в Elm, потому что это строгий язык. 
+На самом деле его праила означают, что **Elm приложение никогда не могт случайно сломаться.** 
+Здесь нет runtime исключений — никаких `undefined is not a function` или `undefined method for nil:NilClass`. 
+Следовательно, Elm разработчики проводят намного меньше времени в консоли the Developer Tools, чем JavaScript разработчики,
+ и меньше времени в браузере в целом.
+
+Потому Elm чтобы все программы следовали его правилам, 
+**компилятор Elm скажет вам точно, что не так с вашей программой, если вы допустили ошибку**. 
+Он сообщит вам, если ваше `if/else` возвращает разные по типу значения, 
+если вы передаете в функцию слишком большое количество аргументов, 
+или если вы ссылаетесь на переменную, которой не существует.
+
+Разработка с Elm напоминает разговор с компилятором, который мягко подталкивает вас к написанию лучшего кода.
+Обычно вам даже нет необходимости следить за вашим приложением в браузере, пока вы его разрабатываете — 
+вы можете довериться компилятору, который скажет вам, что вы на верном пути.
 
 
-## Why not Elm?
+## Почему не Elm?
 
-If you are coming from an object-oriented, dynamically typed language like Ruby or JavaScript, Elm can feel like a straightjacket. There are no `each` or `for` loops in Elm — instead, you use functions like `map`, `filter`, and `fold`. If you need to change a value deep inside a nested data structure, you can't simply read the value and mutate it, as you could in other languages.
+Если вы пришли из объекто-ориентированных, динамически типизируемых языков таких, как Ruby или JavaScript, 
+Elm может быть похожим для вас на смирительную рубашку. 
+Здесь нет циклов `each` или `for` — вместо этого используются другие функции, например, `map`, `filter`, и `fold`. 
+Если вам нужно изменить значение в сложной структуре данных, вы не можете просто прочитать и изменить его, как вы бы сделали это в других языках.
 
-Working with widget libraries can be hard due to conflicting paradigms. If you need to use [D3.js](https://d3js.org/) or [Three.js](https://threejs.org/), you may have difficulties using Elm.
+Работа с другими библиотеками может быть затруднена из-за конфликтов парадигм. 
+Если вам нужно использовать [D3.js](https://d3js.org/) или [Three.js](https://threejs.org/), вы можете испытывать трудности при использовании Elm.
 
-## Learning Elm
+## Изучение Elm
 
-You may be asking yourself why you should choose to learn a language that's so different from other tools in the ecosystem--especially if you aren't looking to work with it professionally yet. **We'd argue that the experience of working in an alien environment, even if it's just for a little while, can be fruitful.** You are probably not used to dealing with the constraints of purity, immutability, and static typing, which together make up the basic tenets of **functional programming**. These constraints will push you to solve problems in creative ways, and hopefully you will learn strategies that you can employ in other languages.
+Вы можете задавать себе вопрос, почему вы должны выбрать для изучения Elm, 
+который так сильно отличается от других инструментов в экосистеме, особенно, если вы не планируете заниматься им профессионально. 
+**Мы аргументируем это тем, что работа в другом окружении, даже на короткое время, может быть очень продуктивной.** 
+Возможно ранее вы не имели дело с ограчениями чистых функций, иммутабельности и статической типизации, 
+которые вместе образуют базовые концепции **функционального программирования**. 
+Эти ограничения подтолкнут вас к решению проблем иными креативными путями, 
+и мы надеемся, что изучив эти стратегии, вы сможете применить их и в других языках.
 
-We make no claim that functional programming is *better* than other types of programming, but it definitely is *different*. We strongly believe that learning a new way to think about programming will make you a better developer, in the same way that learning a foreign language makes you appreciate the architecture and beauty of the languages you already know.
+Мы не утверждаем, что функциональное программирование *лучше* других видов программирования, но оно точно *отличается*. 
+Мы твердо верим, что изучение нового подхода к программированию сделает вас лучше, как разработчика, 
+точно также как изучение иностранных языков заставляет вас ценить структуру и красоту уже знакомых вам языков.
 
-So let's get started!
+Итак, давайте начинать!
